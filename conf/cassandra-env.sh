@@ -190,7 +190,8 @@ if [ "`uname`" = "Linux" ] ; then
     # be pooled anyway.) Only do so on Linux where it is known to be
     # supported.
     # u34 and greater need 180k
-    JVM_OPTS="$JVM_OPTS -Xss180k"
+    # change -Xss value from 180k to 228k to avoid runtime error
+    JVM_OPTS="$JVM_OPTS -Xss228k"
 fi
 echo "xss = $JVM_OPTS"
 
